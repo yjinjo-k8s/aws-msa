@@ -34,6 +34,9 @@ spec:
       containers:
         - name: position-simulator
           image: richardchesterwood/k8s-fleetman-position-simulator:release2-arm64
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: production-microservice
 
 ---
 apiVersion: apps/v1
